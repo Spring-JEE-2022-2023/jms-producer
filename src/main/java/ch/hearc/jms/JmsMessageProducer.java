@@ -26,7 +26,6 @@ public class JmsMessageProducer implements CommandLineRunner{
 			jmsTemplate.convertAndSend("json-q", new HelloWorldMessage("World","Le monde"));
 			
 			
-			
 			jmsTemplate.send("txt-q", messageCreator -> {
                 TextMessage message = messageCreator.createTextMessage();
                 message.setText("youp-yop");
